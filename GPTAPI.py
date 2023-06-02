@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "API_Cod"
 
 # ChatGPT API 요청 보내기
 # response = openai.ChatCompletion.create(
