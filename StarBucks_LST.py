@@ -110,5 +110,5 @@ def Logic(api , give:str):
     Change_Logic = Change_pre_mid_Logic(PLA) + ' -> ' + Change_pre_mid_Logic(PLB)
     print(Change_Logic)
     answer = GPTAPI.ask(api , Change_Logic)
-    return answer
+    return answer , Change_Logic
     

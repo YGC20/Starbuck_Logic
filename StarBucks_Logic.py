@@ -17,12 +17,13 @@ with st.sidebar:
     st.markdown('---')
 
 st.title("스타벅스 논리")
-st.header("논리식 변경")
 st.subheader("논리식을 입력해주세요.")
 st.caption("(괄호와 연산자 사이는 띄어쓰기를 부탁드립니다.)")
 Input = st.text_input("ex) coffee and coffee -> coffee or coffee")
 if st.button("send"):
-    answer = Logic(apikey , Input)
+    answer , ChangeLogic = Logic(apikey , Input)
+    st.write(ChangeLogic)
     st.write(answer)
+    st.caption("결과값이 올바르지 않게 나오면 다시 한번 'send'를 눌러주세요.")
 else:
     st.write("입력 값이 없습니다.")
